@@ -7,16 +7,18 @@
 ```shell
 # Authenticator SPI のビルドとデプロイ
 $ cd authenticator
+$ mvn clean package
 $ cp target/authenticator-required-action-example.jar $KC_HOME/providers
 
 # カスタムテーマのビルドとデプロイ
 $ cd ../theme
+$ mvn clean package
 $ cp target/keycloak-example-themes.jar $KC_HOME/providers
 
 # サーバの起動
-cd $KC_HOME
-bin/kc.sh build
-bin/kc.sh start --proxy=edge --hostname-strict=false
+$ cd $KC_HOME
+$ bin/kc.sh build
+$ bin/kc.sh start --proxy=edge --hostname-strict=false
 ```
 
 ## 設定
